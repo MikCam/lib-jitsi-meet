@@ -1,3 +1,3 @@
 // This file is auto-generated during build
-export const COMMIT_HASH = '2f858756';
+export const COMMIT_HASH = '019e5a2e';
 //# sourceMappingURL=version.js.map
