@@ -1056,9 +1056,11 @@ export default class JingleSessionPC extends JingleSession {
                 session: undefined
             };
 
-            if (errResponse instanceof Element) {
+            // React Native doesn't have the global Element constructor, so check nodeType instead
+            // errResponse can be Element, DOMException, or other types - only process if it's a DOM element (nodeType === 1)
+            if (errResponse && typeof (errResponse as any).nodeType === 'number' && (errResponse as any).nodeType === 1) {
                 // Get XMPP error code and condition(reason)
-                const errorElSel = findFirst(errResponse, 'error');
+                const errorElSel = findFirst(errResponse as unknown as Element, 'error');
 
                 if (errorElSel) {
                     error.code = getAttribute(errorElSel, 'code');
