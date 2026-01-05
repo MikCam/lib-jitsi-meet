@@ -1,4 +1,4 @@
-const ljm = require('./JitsiMeetJS').default;
+const ljm = require('./dist/esm/JitsiMeetJS').default;
 
 /**
  * Tries to deal with the following problem: {@code JitsiMeetJS} is not only
