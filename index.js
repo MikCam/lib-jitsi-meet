@@ -1,4 +1,6 @@
-const ljm = require('./dist/esm/JitsiMeetJS').default;
+// For React Native, the package.json "react-native" field will be used instead of this file.
+// This index.js is only used for Node.js/CommonJS environments.
+const ljm = require('./dist/umd/lib-jitsi-meet.min.js');
 
 /**
  * Tries to deal with the following problem: {@code JitsiMeetJS} is not only
